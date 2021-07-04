@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="fbb32bcf-cd11-4f08-b183-217d4bd8ad30" ChangeDateTime="07/04/2021 19:04:24">
+    <Property Name="ElementName" Value="[dbo].[Person].[PartnerTypeID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PartnerTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="049c45db-2d2f-4938-912a-4f2c77a0ec62" ChangeDateTime="07/04/2021 19:07:46">
+    <Property Name="ElementName" Value="[dbo].[Person].[CreateByUser ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreateByUser" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="20d573dd-6379-4642-9361-30bad419f1d7" ChangeDateTime="07/04/2021 19:07:52">
+    <Property Name="ElementName" Value="[dbo].[Person].[isForeign]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsForeign" />
+  </Operation>
+</Operations>

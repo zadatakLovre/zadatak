@@ -1,0 +1,58 @@
+﻿@model MVCDemo.Controllers.PersonModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="form-vertical">
+        <h4>PersonModel</h4>
+        <div>
+            @Html.TextBoxFor(person => person.FirstName, new { @class = "form-control", placeholder = "First Name" })
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.LastName, new { @class = "form-control", placeholder = "Last Name" })
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.Address, new { @class = "form-control", placeholder = "Address" })
+        </div>
+        <div>
+            @Html.DropDownListFor(person => person.PartnerTypeId, new SelectList(Enum.GetValues(typeof(MVCDemo.Controllers.PartnerType))), "Select partner type:")
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.CroatianPIN, new { @class = "form-control", placeholder = "Croatian PIN" })
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.PartnerNumber, new { @class = "form-control", placeholder = "Partner number" })
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.CreateByUser, new { @class = "form-control", placeholder = "Created by" })
+        </div>
+        <div>
+            <b>Are you foreigner?</b>
+        </div>
+        <div>
+            @Html.CheckBoxFor(person => person.IsForeign, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.TextBoxFor(person => person.ExternalCode, new { @class = "form-control", placeholder = "External code" })
+        </div>
+        <div>
+            @Html.DropDownListFor(person => person.PersonGender, new SelectList(Enum.GetValues(typeof(MVCDemo.Controllers.Gender))), "Select gender:")
+        </div>
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ListPersons")
+</div>
